@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --primaryColor: hsla(0, 93%, 17%, 0.781);
+  --secondaryColor: hsla(0, 84%, 44%, 0.596);
+  --colorExtra: hsla(96, 75%, 58%, 0.932);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Open Sans";
+  line-height: 1.4;
+  color: #000;
+}
+
+/* Navigation-bar arrangement */
+.navbar {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  box-shadow: 0px 2px 3px hsla(0, 93%, 17%, 0.13),
+    0px 2px 2px hsla(0, 93%, 17%, 0.096);
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0px 15px;
+  font-weight: 900;
+}
+.navbar a {
+  color: #000000;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: var(--secondaryColor);
+}
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.navbar-navLeft {
+  text-transform: uppercase;
+  flex: 1;
+  margin-left: 15px;
+}
+
+.navbar-navRight img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.navbar-navRight li:first-child a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Navigation buttons styling */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: none;
+  border: 1px rgb(0, 0, 0) solid;
+  padding: 7px 16px;
+  border-radius: 50px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+.btn-dark-outline {
+  border-color: var(--secondaryColor);
+  color: var(--secondaryColor);
+}
+.btn-dark-outline:hover {
+  background-color: hsla(0, 84%, 44%, 0.952);
+  color: rgb(255, 255, 255);
+}
+.btn-dark {
+  background-color: var(--secondaryColor);
+  color: rgb(255, 255, 255);
+}
+.btn-dark:hover {
+  background-color: hsla(0, 84%, 44%, 0.952);
+  color: rgb(255, 255, 255);
+}
+
+/* Heading section arrangement */
+.sector {
+  background-color: var(--primaryColor);
+  margin-top: 5px;
+}
+.sector-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sector-left {
+  color: white;
+  display: inline-block;
+  margin: 10px 20px;
+}
+.sector-left h1 {
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.sector-left h3 {
+  font-size: 18px;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.sector-right {
+  display: inline-block;
+  margin: 10px 20px;
+}
+.sector-right img {
+  width: 400px;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+.sector-left button {
+  display: block;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: 1px white solid;
+  padding: 7px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+.sector-left button:hover {
+  background-color: hsla(0, 0%, 100%, 0.7);
+  color: hsla(0, 84%, 44%, 0.952);
+}
+@media (max-width: 850px) {
+  .sector-left h1 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  .sector-left h3 {
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  .sector-right img {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+  }
+  .sector-left button {
+    display: block;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: 1px white solid;
+    padding: 7px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+}
+@media (min-width: 1400px) {
+  .sector {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sector-left h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
+  .sector-left h3 {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+  .sector-left button {
+    display: block;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: 1px white solid;
+    padding: 7px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+}
+@media (max-width: 600px) {
+  .sector-container {
+    display: block;
+  }
+  .sector-right {
+    display: block;
+    text-align: center;
+  }
+  .sector-left {
+    display: block;
+    text-align: center;
+    margin: 0 50px;
+  }
+  .sector-left button {
+    display: block;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: 1px white solid;
+    padding: 7px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+  .sector-right img {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 15px;
+  }
+}
+.segment {
+  background-color: hsla(0, 0%, 100%, 0);
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.segment h2 {
+  color: hsla(0, 0%, 0%, 0.952);
+  text-align: center;
+  font-weight: 900;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.segment .thumbnails img {
+  width: 120px;
+  height: auto;
+  border: 2px hsla(0, 84%, 44%, 0.952) solid;
+  border-radius: 10px;
+  padding: 5px;
+}
+.seg-container {
+  display: flex;
+  justify-content: space-between;
+}
+.thumbnails .spn {
+  display: block;
+  text-align: center;
+  width: 120px;
+  margin: 0 auto;
+  font-weight: 900;
+}
+.thumbnails a {
+  text-decoration: none;
+  color: hsla(0, 0%, 0%, 0.952);
+}
+.thumbnails a:hover {
+  color: hsla(0, 84%, 44%, 0.952);
+  text-decoration: none;
+}
+.thumbnails img:hover {
+  width: 150px;
+  background-color: hsla(0, 84%, 44%, 0.437);
+}
+.asd {
+  background-color: hsla(0, 0%, 0%, 0.952);
+  color: hsl(0, 0%, 100%);
+  margin-top: 20px;
+}
